@@ -1,3 +1,10 @@
 <h1>test answer page</h1>
 
-<%=@questionscoach[0]%>
+<%= if params[:answer] == "I am going to work"
+      "Great!"
+    elsif
+    params[:answer].chars.last(1).join == "?"
+      "Silly question, get dressed and go to work!"
+    else
+      "I don't care, get dressed and go to work!"
+    end %>
