@@ -1,4 +1,7 @@
-<h1>test answer page</h1>
+<h1>Stupid Coach</h1>
+
+<%=params[:answer]%>
+<p>-You</p>
 
 <%= if params[:answer] == "I am going to work"
       "Great!"
@@ -8,3 +11,6 @@
     else
       "I don't care, get dressed and go to work!"
     end %>
+<p>-Your coach</p>
+
+<%= link_to "Ask a new question", "http://localhost:3000/ask" %>
