@@ -1,16 +1,12 @@
 <h1>Stupid Coach</h1>
+<div class = "p-3 mb-2 w-25 rounded bg-info text-white">
+  <%=params[:answer]%>
+  <p>-You</p>
+</div>
 
-<%=params[:answer]%>
-<p>-You</p>
-
-<%= if params[:answer] == "I am going to work"
-      "Great!"
-    elsif
-    params[:answer].chars.last(1).join == "?"
-      "Silly question, get dressed and go to work!"
-    else
-      "I don't care, get dressed and go to work!"
-    end %>
-<p>-Your coach</p>
+<div class = "p-3 mb-2 w-25 bg-info text-white">
+  <%= @answer %>
+  <p>-Your coach</p>
+</div>
 
 <%= link_to "Ask a new question", "http://localhost:3000/ask" %>
